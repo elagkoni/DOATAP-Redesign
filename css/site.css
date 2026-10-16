@@ -1,0 +1,730 @@
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+#topbar {
+  padding: 5px 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#topbar .contact-info i a,
+#topbar .contact-info i span {
+  padding-left: 8px;
+}
+
+#topbar .input-group input {
+  line-height: 0;
+  transition: 0.3s;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+#topbar .input-group button {
+  color: #545454;
+}
+
+#topbar .input-group button i {
+  line-height: 0;
+  transition: 0.3s;
+}
+
+#topbar .input-group button i:hover {
+  color: #2596be;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header .logo img {
+  margin: -100px;
+  max-height: 70px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar ul button[type="submit"] {
+  background: #2596be;
+  color: #fff;
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 4px;
+  transition: 0.4s;
+  border-color: #217B9C;
+}
+
+.navbar ul button[type="submit"]:hover {
+  color: #fff;
+  background: #2596be;
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+.section form button[type="submit"] {
+  background: #2596be;
+  color: #fff;
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 4px;
+  transition: 0.4s;
+  border-color: #2596be;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about .content h3 {
+  text-align: center;
+}
+
+.about .content p {
+  text-align: left;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info-box p {
+  color: #545454;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  padding: 0 0 0 0;
+}
+
+#footer img {
+  padding: 0;
+}
+
+#footer .footer-top {
+  padding: 60px 0 0 230px;
+}
+
+#footer .footer-top .footer-info {
+  margin-bottom: 20px;
+}
+
+#footer .footer-top .footer-contact p {
+  line-height: 25px;
+}
+
+/*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+/*--------------------------------------------------------------
+# Tab Menu
+--------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400|Inconsolata);
+
+ul#tabs-list {
+  list-style: none;
+  text-align: center;
+  border-bottom: 1px solid #dfdfdf;
+  margin: 0;
+  padding: 0;
+  color: #217B9C;
+}
+
+label.panel-label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: block;
+  width: 100%;
+  color: #bdc3c7;
+  cursor: pointer;
+  background-color: #ecf0f1;
+  transition-property: background-color, color;
+  transition-duration: 200ms;
+}
+
+label.panel-label:hover {
+  color: #2596be;
+}
+
+#panels {
+  background-color: white;
+}
+
+#panels .container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#panels section header label.panel-label {
+  padding: 12px 24px;
+  box-sizing: border-box;
+}
+
+#panels section main {
+  box-sizing: border-box;
+  max-height: 0;
+  opacity: 0;
+  transition: opacity 600ms;
+  overflow-y: hidden;
+}
+
+#panel-1-ctrl:checked ~ #panels #panel-1 main {
+  max-height: initial;
+  opacity: 1;
+  padding: 48px 24px;
+  box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+#panel-2-ctrl:checked ~ #panels #panel-2 main {
+  max-height: initial;
+  opacity: 1;
+  padding: 48px 24px;
+}
+
+#panel-3-ctrl:checked ~ #panels #panel-3 main {
+  max-height: initial;
+  opacity: 1;
+  padding: 48px 24px;
+}
+
+@media all and (max-width: 767px) {
+  #nav-ctrl:checked ~ #tabs-list #li-for-panel-1 {
+    max-height: 46px;
+    opacity: 1;
+  }
+
+  #nav-ctrl:checked ~ #tabs-list #li-for-panel-2 {
+    max-height: 46px;
+    opacity: 1;
+  }
+
+  #nav-ctrl:checked ~ #tabs-list #li-for-panel-3 {
+    max-height: 46px;
+    opacity: 1;
+  }
+
+  #open-nav-label {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+  }
+
+  #nav-ctrl:checked ~ #tabs-list #open-nav-label {
+    display: none;
+  }
+
+  #close-nav-label {
+    display: block;
+    max-height: 0;
+    overflow-y: hidden;
+    background-color: #444444;
+    color: #ecf0f1;
+    padding: 0px;
+    transition: max-height 200ms;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 1px;
+  }
+
+  #nav-ctrl:checked ~ #tabs-list #close-nav-label {
+    max-height: 36px;
+    opacity: 1;
+    padding: 12px 24px;
+  }
+
+  #tabs-list {
+    position: relative;
+  }
+
+  #tabs-list label.panel-label {
+    padding: 12px 0;
+  }
+
+  #tabs-list #li-for-panel-1 {
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 200ms;
+  }
+
+  #tabs-list #li-for-panel-2 {
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 200ms;
+  }
+
+  #tabs-list #li-for-panel-3 {
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 200ms;
+  }
+
+  #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 {
+    max-height: 46px;
+    opacity: 1;
+  }
+
+  #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 label.panel-label {
+    background-color: white;
+    color: #217B9C;
+    background-color: #FCFCFC;
+    color: white;
+  }
+
+  #panel-2-ctrl:checked ~ #tabs-list #li-for-panel-2 {
+    max-height: 46px;
+    opacity: 1;
+  }
+
+  #panel-2-ctrl:checked ~ #tabs-list #li-for-panel-2 label.panel-label {
+    background-color: white;
+    color: #217B9C;
+    background-color: #FCFCFC;
+    color: white;
+  }
+
+  #panel-3-ctrl:checked ~ #tabs-list #li-for-panel-3 {
+    max-height: 46px;
+    opacity: 1;
+  }
+
+  #panel-3-ctrl:checked ~ #tabs-list #li-for-panel-3 label.panel-label {
+    background-color: white;
+    color: #217B9C;
+    background-color: #2596be;
+    color: white;
+  }
+
+  #panels .container {
+    width: 100%;
+  }
+
+  #panels section header {
+    display: block;
+  }
+}
+
+@media all and (min-width: 768px) {
+  #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 {
+    pointer-events: none;
+    cursor: default;
+    transform: translate3d(0, 1px, 0);
+    box-shadow: none;
+    border-right: none;
+  }
+
+  #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1.last {
+    border-right: 1px solid transparent;
+  }
+
+  #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 + li {
+    border-left: 1px solid #dfdfdf;
+  }
+
+  #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 label.panel-label {
+    background-color: white;
+    color: #2596be;
+    padding-top: 26px;
+  }
+
+  #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 label.panel-label::after {
+    height: 6px;
+  }
+
+  #panel-2-ctrl:checked ~ #tabs-list #li-for-panel-2 {
+    pointer-events: none;
+    cursor: default;
+    transform: translate3d(0, 1px, 0);
+    box-shadow: none;
+    border-right: none;
+  }
+
+  #panel-2-ctrl:checked ~ #tabs-list #li-for-panel-2.last {
+    border-right: 1px solid transparent;
+  }
+
+  #panel-2-ctrl:checked ~ #tabs-list #li-for-panel-2 + li {
+    border-left: 1px solid #dfdfdf;
+  }
+
+  #panel-2-ctrl:checked ~ #tabs-list #li-for-panel-2 label.panel-label {
+    background-color: white;
+    color: #2596be;
+    padding-top: 26px;
+  }
+
+  #panel-2-ctrl:checked ~ #tabs-list #li-for-panel-2 label.panel-label::after {
+    height: 6px;
+  }
+
+  #panel-3-ctrl:checked ~ #tabs-list #li-for-panel-3 {
+    pointer-events: none;
+    cursor: default;
+    transform: translate3d(0, 1px, 0);
+    box-shadow: none;
+    border-right: none;
+  }
+
+  #panel-3-ctrl:checked ~ #tabs-list #li-for-panel-3.last {
+    border-right: 1px solid transparent;
+  }
+
+  #panel-3-ctrl:checked ~ #tabs-list #li-for-panel-3 + li {
+    border-left: 1px solid #dfdfdf;
+  }
+
+  #panel-3-ctrl:checked ~ #tabs-list #li-for-panel-3 label.panel-label {
+    background-color: white;
+    color: #2596be;
+    padding-top: 26px;
+  }
+
+  #panel-3-ctrl:checked ~ #tabs-list #li-for-panel-3 label.panel-label::after {
+    height: 6px;
+  }
+
+  ul#tabs-list {
+    text-align: left;
+    border-bottom: 1px solid #dfdfdf;
+    padding-left: 45px;
+  }
+
+  ul#tabs-list li {
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    width: 18%;
+    box-shadow: 0px -2px 2px rgba(0, 0, 0, 0.05);
+    border-right: 1px solid #dfdfdf;
+    position: relative;
+  }
+
+  ul#tabs-list li:hover {
+    transition: none;
+    border-right: none;
+  }
+
+  ul#tabs-list li:hover.last {
+    border-right: 1px solid transparent;
+  }
+
+  ul#tabs-list li:hover + li {
+    border-left: 1px solid #dfdfdf;
+  }
+
+  ul#tabs-list li label.panel-label {
+    position: relative;
+    padding: 24px 0;
+  }
+
+  ul#tabs-list li label.panel-label::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 100%;
+    background-color: #2596be;
+    height: 0;
+    transition-property: height;
+    transition-duration: 200ms;
+  }
+
+  ul#tabs-list li label.panel-label:hover {
+    padding-top: 25px;
+  }
+
+  ul#tabs-list li label.panel-label:hover::after {
+    height: 6px;
+  }
+
+  #open-nav-label,
+  #close-nav-label {
+    display: none;
+  }
+
+  #nav-ctrl {
+    display: none;
+  }
+}
+
+@media all and (min-width: 900px) {
+  main {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.panel-radios {
+  position: fixed;
+  left: 50%;
+  top: 10px;
+  width: 20px;
+  opacity: 0.5;
+  z-index: 99;
+}
+
+.panel-radios:nth-child(1) {
+  transform: translateX(-50px);
+}
+
+.panel-radios:nth-child(2) {
+  transform: translateX(-30px);
+}
+
+.panel-radios:nth-child(3) {
+  transform: translateX(-10px);
+}
+
+.panel-radios:nth-child(4) {
+  transform: translateX(10px);
+}
+
+.panel-radios:nth-child(5) {
+  transform: translateX(30px);
+}
+
+.panel-radios:nth-child(6) {
+  top: 30px;
+  transform: translateX(-10px);
+  display: block;
+}
+
+#introduction {
+  width: 90%;
+  margin: 0 auto;
+  padding: 48px 24px;
+  color: white;
+}
+
+#introduction h1 {
+  font-weight: 300;
+  text-align: center;
+}
+
+main h1 {
+  margin-top: 0;
+  font-weight: 300;
+  color: black;
+}
+
+main p {
+  line-height: 1.8;
+}
+
+main hr {
+  margin: 12px 0;
+  border-top: 1px solid #dfdfdf;
+}
+
+label.demo-label {
+  background-color: #2596be;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+label.demo-label:hover {
+  background-color: #217B9C;
+}
+
+#demo-child-toggle {
+  display: none;
+}
+
+#demo-child-toggle:checked ~ #demo-parent #demo-child {
+  color: #2596be;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#demo-parent {
+  margin-top: 8px;
+}
+
+code,
+pre {
+  color: #2596be;
+  font-family: Inconsolata, "Andale Mono", Andale, monowidth;
+  background-color: #ecf0f1;
+  border: 1px solid #dfdfdf;
+  border-radius: 2px;
+}
+
+code {
+  padding: 2px 6px;
+}
+
+pre {
+  padding: 12px;
+  line-height: 1.6;
+}
+
+pre strong {
+  color: #444444;
+  font-weight: normal;
+}
+
+/*--------------------------------------------------------------
+# MultiStep Form
+--------------------------------------------------------------*/
+#msform{
+	width: 100%;
+	margin: 0 0;
+	text-align: center;
+	position: relative;
+}
+#msform fieldset{
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0 0;
+	position: static;
+  text-align: start;
+}
+#msform fieldset:not(:first-of-type){
+	display: none;
+}
+#msform input, #msform textarea{
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	color: #2C3E50;
+	font-size: 13px;
+}
+#msform .action-button{
+	width: 100px;
+	background: #2596be;
+	font-weight: 400;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+  text-align: center;
+}
+#msform .action-button:hover, #msform .action-button:focus{
+	box-shadow: 0 0 0 2px #217B9C, 0 0 0 3px #217B9C;
+}
+.fs-title{
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+	font-weight:500;
+}
+.fs-subtitle{
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	counter-reset: step;
+}
+#progressbar li {
+    list-style-type: none;
+    color: #767676;
+    text-transform: capitalize;
+    font-size: 16px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+}
+#progressbar li.active {
+    color: #217B9C;
+}
+#progressbar li:before{
+    content:'' ;/*counter(step)*/
+    counter-increment: step;
+    width: 50px;
+    line-height: 50px;
+    display: block;
+    font-size: 18px;
+    color:#fff ;
+    background: transparent;
+    border-radius: 100%;
+    margin: 0 auto 5px auto;    
+	border: 2px solid #ECECEC;
+}
+#progressbar li:nth-child(1):before{
+	content:"\f129" ;
+	font-family: 'FontAwesome';	
+}
+#progressbar li:nth-child(2):before{
+	content:"\f007" ;
+	font-family: 'FontAwesome';	
+}
+#progressbar li:nth-child(3):before{
+	content:"\f15b" ;
+	font-family: 'FontAwesome';	
+}
+#progressbar li:after {
+    content: '';
+    width: 73%;
+    height: 2px;
+    background: #ECECEC;
+    position: absolute;
+    left: -35%;
+    top: 25px;
+    z-index: -1;
+}
+#progressbar li:first-child:after {
+	content: none;
+}
+#progressbar li.active:before {
+    border: 2px solid #2596be;
+    color: #2596be;
+  /* content: "\f164";*/
+}
+#progressbar li.active:after {
+	background: #2596be;
+	color: white;
+}
+.form_holder {
+    text-align: center;
+    margin: 30px 0 0;
+}
