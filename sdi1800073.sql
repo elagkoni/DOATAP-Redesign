@@ -99,9 +99,9 @@ CREATE TABLE `default_user` (
 --
 
 INSERT INTO `default_user` (`USER_ID`, `username`, `email`, `password`, `firstname`, `lastname`, `fathername`, `mothername`, `birthdate`, `telephone`, `phone`, `ADMIN`) VALUES
-(6, 'user1', 'user1@doatap.gr', '12345678', 'Μαρία', 'Παπαδοπούλου', 'Γιώργος', 'Αλεξάνδρα', '1998-12-08', '', '6901230321', 1),
+(6, 'user1', 'user1@doatap.gr', '12345678', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1),
 (8, 'lykos', 'sdi1800073@di.uoa.gr', '12345678', 'Sergios', 'Kefalidis', 'Andreas', 'Paraskevi', '2000-02-24', '', '+30 6996699666', 0),
-(9, 'meow', 'sdi1800088@doatap.gr', '12345678', 'Μαρία', 'Παπαδοπούλου', 'Γιώργος', 'Αλεξάνδρα', '1998-12-08', '', '6901230321', 0),
+(9, 'user2', 'sdi1800088@doatap.gr', '12345678', 'Μαρία', 'Παπαδοπούλου', 'Γιώργος', 'Αλεξάνδρα', '1998-12-08', '', '6901230321', 0),
 (10, 'aristos', 'aristos@fake-mail.com', '12345678', 'Aristotelis', 'Rigas', 'Takis', 'Manto', '1980-01-01', '210 100 50 70', '6552525100', 0);
 
 -- --------------------------------------------------------
